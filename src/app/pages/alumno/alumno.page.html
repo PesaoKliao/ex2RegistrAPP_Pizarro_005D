@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    <ion-title> Sesion de Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main-header">
+    <h3 class="titulo">Bienvenid@ {{getName()}} </h3>
+    <h2 class="temper">Temperatura: {{temperatura}}</h2>
+  </div>
+
+  <div class="container">
+    <ion-grid class="margindiv">
+      <ion-row>
+        <ion-col size="12">
+
+          <ion-card mode="md">
+            <ion-card-header>
+              <ion-card-title style="text-align: center;"><b>Escanear QR de la clase.</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button mode="md" (click)="escanearqr()" expand="full" shape="round" color="tertiary">
+                Escanear
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

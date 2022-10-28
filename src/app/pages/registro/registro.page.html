@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="margindiv">
+    <ion-row>
+      <ion-col size="12">
+  <form [formGroup]="formularioRegistro" (keyup.enter)="RevisarCorreo()">
+  <ion-card mode="md">
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nombre" name="inputNombre" formControlName="nombre" required></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="email" placeholder="correo@duoc.cl" name="inputCorreo" formControlName="email" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="*********" name="repetirInputContraseña" formControlName="password"
+      required>
+      </ion-input>
+    </ion-item>
+
+  </ion-card>
+  <div class="center">
+      <ion-button (click)="RevisarCorreo()"  type="submit" routerLink="/inicio">
+        Registrar
+      </ion-button>
+  </div>
+
+  </form>
+
+</ion-col>
+</ion-row>
+</ion-grid>
+<div class="center">
+  <ion-button  class="btnregistrar"  routerLink="/inicio">
+    Cancelar
+  </ion-button>
+</div>
+</ion-content>
